@@ -4,7 +4,8 @@
   "description": "A CLI for oleoo.",
   "main": "src/index.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "fix": "standard --fix"
   },
   "bin": {
     "oleoo-cli": "bin/oleoo-cli.js"
