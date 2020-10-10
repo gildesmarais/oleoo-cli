@@ -6,24 +6,26 @@ This is a command line interface for [oleoo](https://github.com/thcolin/oleoo). 
 
 ## Usage
 
-When called directly, oleoo-cli parses the input and returns the generated release name:
+I recommend using [npx](https://github.com/npm/npx) to run oleoo-cli directly.
+
+When called without arguments, oleoo-cli parses the input and returns the generated release name:
 
 ```
-$ oleoo-cli 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON'
+$ npx gildesmarais/oleoo-cli 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON'
 Arrow.S03E01.VOSTFR.HDTV.x264.FASTSUB-ADDiCTiON
 ```
 
 You can also let oleoo *guess*:
 
 ```
-$ oleoo-cli --guess 'Bataille a Seattle BDRip'
+$ npx gildesmarais/oleoo-cli --guess 'Bataille a Seattle BDRip'
 Bataille.A.Seattle.BDRip-NOTEAM
 ```
 
 Or print the full JSON:
 
 ```
-$ oleoo-cli --json 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON'
+$ npx gildesmarais/oleoo-cli --json 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON'
 {
   original: 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON',
   language: 'VOSTFR',
@@ -44,10 +46,10 @@ $ oleoo-cli --json 'Arrow.S03E01.FASTSUB.VOSTFR.HDTV.x264-ADDiCTiON'
 }
 ```
 
-`oleoo-cli --help` lists all available options:
+`npx gildesmarais/oleoo-cli --help` lists all available options:
 
 ```
-$ oleoo-cli --help
+$ npx gildesmarais/oleoo-cli --help
 Usage: oleoo-cli [options] <name>
 
 Options:
