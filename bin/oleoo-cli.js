@@ -12,8 +12,8 @@ program
   .option('-d, --debug', 'print debug information', false)
 
 const modes = {
-  'parse': oleoo.parse,
-  'guess': oleoo.guess,
+  parse: oleoo.parse,
+  guess: oleoo.guess
 }
 
 program

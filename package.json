@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A CLI for oleoo.",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "standard"
+  },
   "bin": {
     "oleoo-cli": "bin/oleoo-cli.js"
   },
@@ -25,5 +27,8 @@
   "dependencies": {
     "commander": "^6.1.0",
     "oleoo": "^1.0.8"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4"
   }
 }
