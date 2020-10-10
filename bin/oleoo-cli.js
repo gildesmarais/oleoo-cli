@@ -7,19 +7,16 @@ const { program } = require('commander')
 program.version(require('../package.json').version)
 
 program
-  .option('-m, --mode <mode>', 'choose between parse (default) or guess', 'parse')
+  .option('-g, --guess', 'guess the release name instead of parsing', false)
   .option('-j, --json', 'print json output', false)
   .option('-d, --debug', 'print debug information', false)
 
-const modes = {
-  parse: oleoo.parse,
-  guess: oleoo.guess
-}
+const mode = program.guess ? 'guess' : 'parse'
 
 program
   .arguments('<name>')
   .action(name => {
-    const release = modes[program.mode](name)
+    const release = oleoo[mode](name)
 
     if (program.json) {
       console.log(release)
