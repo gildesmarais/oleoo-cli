@@ -30,6 +30,6 @@
     "oleoo": "^1.0.8"
   },
   "devDependencies": {
-    "standard": "^16.0.0"
+    "standard": "^16.0.1"
   }
 }
